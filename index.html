@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Sistema simples para emissão de Nota Fiscal de Serviço Eletrônica (NFS-e), com cálculo automático de impostos.">
+    <title>Emissão de NFS-e</title>
+    <link rel="icon" href="saguitech_logo.jpg">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>Emissão de Nota Fiscal de Serviço (NFS-e)</h1>
+    </header>
+
+    <main>
+        <form id="notaFiscalForm" aria-label="Formulário de emissão de NFS-e">
+            <div class="form-group">
+                <label for="valorVenda">Valor da Venda: </label>
+                <input type="number" id="valorVenda" aria-label="Valor da venda" required>
+            </div>
+
+            <div class="form-group">
+                <label for="itens">Itens: </label>
+                <textarea id="itens" aria-label="Descrição dos itens" rows="4" required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="irpf">Porcentagem do IRPF (%): </label>
+                <input type="number" id="irpf" aria-label="Porcentagem do IRPF" required>
+            </div>
+
+            <div class="form-group">
+                <label for="pis">Porcentagem do PIS (%): </label>
+                <input type="number" id="pis" aria-label="Porcentagem do PIS" required>
+            </div>
+
+            <div class="form-group">
+                <label for="cofins">Porcentagem do COFINS (%): </label>
+                <input type="number" id="cofins" aria-label="Porcentagem do COFINS" required>
+            </div>
+
+            <div class="form-group">
+                <label for="inss">Porcentagem do INSS (%): </label>
+                <input type="number" id="inss" aria-label="Porcentagem do INSS" required>
+            </div>
+
+            <div class="form-group">
+                <label for="issqn">Porcentagem do ISSQN (%): </label>
+                <input type="number" id="issqn" aria-label="Porcentagem do ISSQN" required>
+            </div>
+
+            <button type="button" id="emitirNota">Emitir Nota Fiscal</button>
+        </form>
+
+        <section id="notaFiscal" class="nota-fiscal" style="display:none;">
+            <h2>Nota Fiscal de Serviço</h2>
+            <p><strong>Valor da Venda: </strong><span id="valorVendaNF"></span></p>
+            <p><strong>Itens: </strong><span id="itensNF"></span></p>
+            <p><strong>IRPF: </strong><span id="irpfNF"></span></p>
+            <p><strong>PIS: </strong><span id="pisNF"></span></p>
+            <p><strong>COFINS: </strong><span id="cofinsNF"></span></p>
+            <p><strong>INSS: </strong><span id="inssNF"></span></p>
+            <p><strong>ISSQN: </strong><span id="issqnNF"></span></p>
+            <p><strong>Total Impostos: </strong><span id="totalImpostosNF"></span></p>
+        </section>
+    </main>
+    <footer>
+        <p>Desenvolvido por João Pedro Moretti - Todos os direitos reservados.</p>
+    </footer>
+</body>
+
+</html>
