@@ -20,4 +20,4 @@ Este projeto consiste em uma aplicação web simples para simular a emissão de 
 1. **Clone o repositório**:
 
 ```bash
-git clone [https://github.com/seu-usuario/emissao-nfse.git](https://github.com/Morettys2/CalculadoraNFS)
+git clone https://github.com/Morettys2/CalculadoraNFS
